@@ -34,7 +34,7 @@ point.http (적립, 적립 취소, 사용, 사용 취소 API)
 
 
 
-![img.png](img.png)
+![img.png](src/img.png)
 
 
 ## 포인트 시스템 (설계)
@@ -58,13 +58,13 @@ point.http (적립, 적립 취소, 사용, 사용 취소 API)
 ## 시나리오
 
 ### 첫 번째 적립 (1000 포인트)
-![img_1.png](img_1.png)
+![img_1.png](src/img_1.png)
 
 ### 두 번째 적립 (500 포인트)
-![img_2.png](img_2.png)
+![img_2.png](src/img_2.png)
 
 ### 주문 "A1234"에서 1200 포인트 사용
-![img_3.png](img_3.png)
+![img_3.png](src/img_3.png)
 
 ### 주문 "A1234"의 사용 거래 중 1100 포인트 부분 취소
-![img_4.png](img_4.png)
+![img_4.png](src/img_4.png)
