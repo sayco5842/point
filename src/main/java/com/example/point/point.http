@@ -1,0 +1,55 @@
+###########################################################################
+### 1. Save Points - 첫 번째 적립 (1000 포인트)
+###########################################################################
+POST http://localhost:8080/api/points/save
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": 1,
+  "amount": 1000,
+  "expireDays": 365
+}
+
+
+###########################################################################
+### 2. Save Points - 두 번째 적립 (500 포인트)
+###########################################################################
+POST http://localhost:8080/api/points/save
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": 1,
+  "amount": 500,
+  "expireDays": 365
+}
+
+
+###########################################################################
+### 3. Use Points - 주문 "A1234"에서 1200 포인트 사용
+###    (예상: 첫번째 적립에서 1000포인트, 두번째 적립에서 200포인트 차감)
+###########################################################################
+POST http://localhost:8080/api/points/use?userId=1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "usageAmount": 1200,
+  "orderId": "A1234"
+}
+
+
+###########################################################################
+### 4. Cancel Use Points - 주문 "A1234"의 사용 거래 중 1100 포인트 부분 취소
+###    (취소 시, 각 거래에서 취소된 포인트만큼 적립 건의 잔액 복원)
+###########################################################################
+POST http://localhost:8080/api/points/use/cancel
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": 1,
+  "orderId": "A1234",
+  "cancelAmount": 1100
+}
